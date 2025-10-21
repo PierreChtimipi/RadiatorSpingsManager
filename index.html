@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏎️ Cars Character Manager</title>
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header avec navigation et bascule de thème -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>🏎️ Cars Manager</h1>
+                <p>Gestionnaire des personnages de Radiator Springs</p>
+            </div>
+            
+            <nav class="nav">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button id="add-character-btn" class="btn btn-primary">
+                    ➕ Nouveau personnage
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Barre de recherche et filtres -->
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-bar">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="🔍 Rechercher un personnage..."
+                    class="search-input"
+                >
+                <button id="clear-search" class="clear-btn">✖️</button>
+            </div>
+            
+            <div class="filters">
+                <select id="type-filter" class="filter-select">
+                    <option value="">Tous les types</option>
+                    <option value="voiture">Voiture de course</option>
+                    <option value="dépanneuse">Dépanneuse</option>
+                    <option value="porsche">Porsche</option>
+                    <option value="hudson">Hudson</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="chevrolet">Chevrolet</option>
+                </select>
+                
+                <button id="favorites-toggle" class="btn btn-secondary">
+                    ⭐ Favoris uniquement
+                </button>
+                
+                <div class="stats">
+                    <span id="character-count">0 personnages</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section principale avec la liste des personnages -->
+    <main class="main">
+        <div class="main-container">
+            <!-- Liste des personnages -->
+            <section class="characters-section">
+                <div id="characters-grid" class="characters-grid">
+                    <!-- Les cartes de personnages seront générées dynamiquement ici -->
+                </div>
+                
+                <div id="no-results" class="no-results" style="display: none;">
+                    <div class="no-results-icon">🔍</div>
+                    <h3>Aucun personnage trouvé</h3>
+                    <p>Essayez de modifier vos critères de recherche</p>
+                </div>
+            </section>
+
+            <!-- Sidebar avec informations détaillées -->
+            <aside id="character-details" class="character-details" style="display: none;">
+                <button id="close-details" class="close-btn">✖️</button>
+                <div id="details-content" class="details-content">
+                    <!-- Le contenu des détails sera généré dynamiquement -->
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Modal pour ajouter/modifier un personnage -->
+    <div id="character-modal" class="modal" style="display: none;">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Ajouter un personnage</h2>
+                <button id="modal-close" class="close-btn">✖️</button>
+            </div>
+            
+            <form id="character-form" class="character-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Nom du personnage *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required
+                            placeholder="Ex: Flash McQueen"
+                            class="form-input"
+                        >
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="type">Type de véhicule *</label>
+                        <input 
+                            type="text" 
+                            id="type" 
+                            name="type" 
+                            required
+                            placeholder="Ex: Voiture de course"
+                            class="form-input"
+                        >
+                        <span class="error-message" id="type-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="color">Couleur principale *</label>
+                        <div class="color-input-group">
+                            <input 
+                                type="color" 
+                                id="color" 
+                                name="color" 
+                                value="#FF0000"
+                                class="color-picker"
+                            >
+                            <input 
+                                type="text" 
+                                id="color-text" 
+                                placeholder="#FF0000"
+                                class="form-input color-text"
+                            >
+                        </div>
+                        <span class="error-message" id="color-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hometown">Ville d'origine</label>
+                        <input 
+                            type="text" 
+                            id="hometown" 
+                            name="hometown" 
+                            placeholder="Ex: Radiator Springs"
+                            class="form-input"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialty">Spécialité</label>
+                        <input 
+                            type="text" 
+                            id="specialty" 
+                            name="specialty" 
+                            placeholder="Ex: Course sur circuit"
+                            class="form-input"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="imageUrl">URL de l'image</label>
+                        <input 
+                            type="url" 
+                            id="imageUrl" 
+                            name="imageUrl" 
+                            placeholder="https://example.com/image.jpg"
+                            class="form-input"
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group form-group-full">
+                    <label for="description">Description *</label>
+                    <textarea 
+                        id="description" 
+                        name="description" 
+                        required
+                        rows="4"
+                        placeholder="Décrivez le personnage, son histoire, sa personnalité..."
+                        class="form-textarea"
+                    ></textarea>
+                    <span class="error-message" id="description-error"></span>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="cancel-btn" class="btn btn-secondary">
+                        Annuler
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <span id="submit-text">Ajouter</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de confirmation pour la suppression -->
+    <div id="delete-modal" class="modal" style="display: none;">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h2>Confirmer la suppression</h2>
+            </div>
+            <div class="modal-body">
+                <p>Êtes-vous sûr de vouloir supprimer <strong id="delete-character-name"></strong> ?</p>
+                <p class="warning">Cette action est irréversible.</p>
+            </div>
+            <div class="form-actions">
+                <button type="button" id="cancel-delete" class="btn btn-secondary">
+                    Annuler
+                </button>
+                <button type="button" id="confirm-delete" class="btn btn-danger">
+                    🗑️ Supprimer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifications toast -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Bouton de retour en haut -->
+    <button id="scroll-to-top" class="scroll-to-top" style="display: none;">
+        ⬆️
+    </button>
+
+    <!-- Scripts JavaScript -->
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
