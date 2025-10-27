@@ -81,7 +81,6 @@ class CarsApp {
     this.elements = {
       // Containers
       charactersGrid: document.getElementById('characters-grid'),
-      characterDetails: document.getElementById('character-details'),
       noResults: document.getElementById('no-results'),
       
       // Recherche et filtres
@@ -96,6 +95,11 @@ class CarsApp {
       modalOverlay: document.getElementById('modal-overlay'),
       modalClose: document.getElementById('modal-close'),
       deleteModal: document.getElementById('delete-modal'),
+      
+      // Modal de détails
+      detailsModal: document.getElementById('character-details-modal'),
+      detailsModalOverlay: document.getElementById('details-modal-overlay'),
+      detailsContent: document.getElementById('details-content'),
       
       // Formulaire
       characterForm: document.getElementById('character-form'),
@@ -152,10 +156,16 @@ class CarsApp {
    * Initialiser les détails des personnages
    */
   initializeCharacterDetails() {
-    this.characterDetails = new CharacterDetails(null, this.elements.characterDetails);
+    this.characterDetails = new CharacterDetails(null, this.elements.detailsContent);
     
     if (this.elements.closeDetailsBtn) {
       this.elements.closeDetailsBtn.addEventListener('click', () => {
+        this.hideCharacterDetails();
+      });
+    }
+
+    if (this.elements.detailsModalOverlay) {
+      this.elements.detailsModalOverlay.addEventListener('click', () => {
         this.hideCharacterDetails();
       });
     }
@@ -420,6 +430,17 @@ class CarsApp {
     this.state.currentCharacter = character;
     this.characterDetails.character = character;
     this.characterDetails.render();
+    
+    // Afficher le modal
+    if (this.elements.detailsModal) {
+      this.elements.detailsModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      
+      // Animation d'entrée
+      setTimeout(() => {
+        this.elements.detailsModal.classList.add('show');
+      }, 10);
+    }
   }
 
   /**
@@ -427,7 +448,17 @@ class CarsApp {
    */
   hideCharacterDetails() {
     this.state.currentCharacter = null;
-    this.characterDetails.hide();
+    
+    // Masquer le modal avec animation
+    if (this.elements.detailsModal) {
+      this.elements.detailsModal.classList.remove('show');
+      document.body.style.overflow = '';
+      
+      setTimeout(() => {
+        this.elements.detailsModal.style.display = 'none';
+        this.characterDetails.hide();
+      }, 300);
+    }
   }
 
   /**

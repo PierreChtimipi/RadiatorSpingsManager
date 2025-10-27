@@ -79,16 +79,24 @@
                     <p>Essayez de modifier vos critères de recherche</p>
                 </div>
             </section>
+        </div>
+    </main>
 
-            <!-- Sidebar avec informations détaillées -->
-            <aside id="character-details" class="character-details" style="display: none;">
+    <!-- Modal pour les détails du personnage -->
+    <div id="character-details-modal" class="modal" style="display: none;">
+        <div class="modal-overlay" id="details-modal-overlay"></div>
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 id="details-modal-title">Détails du personnage</h2>
                 <button id="close-details" class="close-btn">✖️</button>
+            </div>
+            <div class="modal-body">
                 <div id="details-content" class="details-content">
                     <!-- Le contenu des détails sera généré dynamiquement -->
                 </div>
-            </aside>
+            </div>
         </div>
-    </main>
+    </div>
 
     <!-- Modal pour ajouter/modifier un personnage -->
     <div id="character-modal" class="modal" style="display: none;">

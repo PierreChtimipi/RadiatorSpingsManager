@@ -1,105 +1,16 @@
 /**
+ * Service pour charger les données des personnages depuis le fichier JSON
+ * Ce module utilise l'API Fetch pour charger les données
+ */
+
+// Import du fichier JSON (Vite gère l'import JSON automatiquement)
+import charactersData from './characters.json';
+
+/**
  * Données des personnages du film Cars
  * Chaque personnage contient : id, nom, type, couleur, description, ville d'origine, et URL d'image
  */
-export const carsCharacters = [
-  {
-    id: 1,
-    name: "Flash McQueen",
-    type: "Voiture de course",
-    color: "#FF0000",
-    description: "Flash McQueen est une voiture de course rouge numéro 95. Ambitieux et déterminé, il apprend l'importance de l'amitié et de l'humilité à Radiator Springs.",
-    hometown: "Radiator Springs",
-    imageUrl: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=300&fit=crop",
-    specialty: "Course sur circuit",
-    isFavorite: false,
-    year: 2006
-  },
-  {
-    id: 2,
-    name: "Martin", 
-    type: "Dépanneuse",
-    color: "#8B4513",
-    description: "Martin est une dépanneuse rouillée au grand cœur. Meilleur ami de Flash, il est toujours prêt à aider malgré son moteur capricieux.",
-    hometown: "Radiator Springs",
-    imageUrl: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop",
-    specialty: "Dépannage et marche arrière",
-    isFavorite: false,
-    year: 2006
-  },
-  {
-    id: 3,
-    name: "Sally Carrera",
-    type: "Porsche 911",
-    color: "#4169E1",
-    description: "Sally est une Porsche bleue élégante, avocate devenue propriétaire du Cozy Cone Motel. Elle aide Flash à découvrir les valeurs de Radiator Springs.",
-    hometown: "Radiator Springs", 
-    imageUrl: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=300&fit=crop",
-    specialty: "Droit et hospitalité",
-    isFavorite: false,
-    year: 2006
-  },
-  {
-    id: 4,
-    name: "Doc Hudson",
-    type: "Hudson Hornet 1951",
-    color: "#2F4F4F",
-    description: "Doc Hudson est le médecin et juge de Radiator Springs, mais aussi l'ancien champion Fabulous Hudson Hornet. Mentor de Flash McQueen.",
-    hometown: "Radiator Springs",
-    imageUrl: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=400&h=300&fit=crop",
-    specialty: "Médecine et course",
-    isFavorite: false,
-    year: 2006
-  },
-  {
-    id: 5,
-    name: "Flo",
-    type: "Show car des années 50",
-    color: "#FF69B4",
-    description: "Flo est la propriétaire du V8 Café, connue pour ses milkshakes et son caractère bien trempé. Épouse de Ramone.",
-    hometown: "Radiator Springs",
-    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-    specialty: "Cuisine et service",
-    isFavorite: false,
-    year: 2006
-  },
-  {
-    id: 6,
-    name: "Ramone",
-    type: "Chevrolet Impala 1959",
-    color: "#800080",
-    description: "Ramone est un lowrider passionné de customisation. Il change de couleur selon son humeur et tient le magasin de carrosserie.",
-    hometown: "Radiator Springs",
-    imageUrl: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop",
-    specialty: "Peinture et customisation",
-    isFavorite: false,
-    year: 2006
-  },
-  {
-    id: 7,
-    name: "Luigi",
-    type: "Fiat 500",
-    color: "#FFFF00",
-    description: "Luigi est le propriétaire du magasin de pneus Casa Della Tires. Passionné de course automobile, surtout les Ferrari italiennes.",
-    hometown: "Radiator Springs",
-    imageUrl: "https://images.unsplash.com/photo-1583747091849-ad948d080622?w=400&h=300&fit=crop",
-    specialty: "Vente de pneus",
-    isFavorite: false,
-    year: 2006
-  },
-  {
-    id: 8,
-    name: "Guido",
-    type: "Chariot élévateur Alza/Tutto",
-    color: "#0000FF",
-    description: "Guido est l'assistant de Luigi et le plus rapide changeur de pneus du monde. Il ne parle qu'italien mais comprend tout.",
-    hometown: "Radiator Springs",
-    imageUrl: "https://images.unsplash.com/photo-1558563438-6d8b97f1ae73?w=400&h=300&fit=crop",
-    specialty: "Changement de pneus express",
-    isFavorite: false,
-    year: 2006
-  }
-];
+export const carsCharacters = charactersData;
 
 /**
  * Fonctions utilitaires pour gérer les données des personnages

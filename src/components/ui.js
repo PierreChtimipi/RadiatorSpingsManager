@@ -213,19 +213,17 @@ export class CharacterDetails {
       return;
     }
 
-    this.container.style.display = 'block';
-    
-    const detailsContent = this.container.querySelector('#details-content');
-    detailsContent.innerHTML = this.getDetailsHTML();
+    // Le container est déjà l'élément details-content
+    this.container.innerHTML = this.getDetailsHTML();
     
     // Ajouter une animation d'apparition
     this.container.style.opacity = '0';
-    this.container.style.transform = 'translateX(20px)';
+    this.container.style.transform = 'scale(0.95)';
     
     requestAnimationFrame(() => {
       this.container.style.transition = 'all 0.3s ease';
       this.container.style.opacity = '1';
-      this.container.style.transform = 'translateX(0)';
+      this.container.style.transform = 'scale(1)';
     });
   }
 
@@ -235,10 +233,10 @@ export class CharacterDetails {
   hide() {
     this.container.style.transition = 'all 0.3s ease';
     this.container.style.opacity = '0';
-    this.container.style.transform = 'translateX(20px)';
+    this.container.style.transform = 'scale(0.95)';
     
     setTimeout(() => {
-      this.container.style.display = 'none';
+      this.container.innerHTML = '';
     }, 300);
   }
 

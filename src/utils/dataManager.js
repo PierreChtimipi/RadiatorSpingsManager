@@ -121,6 +121,9 @@ export class ReactiveDataManager {
   constructor(initialData = []) {
     this.eventEmitter = new EventEmitter();
     
+    // Capturer 'this' pour l'utiliser dans les handlers du Proxy
+    const self = this;
+    
     // Créer un proxy pour détecter automatiquement les changements
     this.data = new Proxy(initialData, {
       get: (target, property) => {
@@ -131,31 +134,31 @@ export class ReactiveDataManager {
         
         // Méthodes personnalisées du gestionnaire de données
         if (property === 'add') {
-          return this.addItem.bind(this);
+          return self.addItem.bind(self);
         }
         if (property === 'update') {
-          return this.updateItem.bind(this);
+          return self.updateItem.bind(self);
         }
         if (property === 'remove') {
-          return this.removeItem.bind(this);
+          return self.removeItem.bind(self);
         }
         if (property === 'clear') {
-          return this.clearAll.bind(this);
+          return self.clearAll.bind(self);
         }
         if (property === 'filter') {
-          return this.filterItems.bind(this);
+          return self.filterItems.bind(self);
         }
         if (property === 'search') {
-          return this.searchItems.bind(this);
+          return self.searchItems.bind(self);
         }
         if (property === 'on') {
-          return this.eventEmitter.on.bind(this.eventEmitter);
+          return self.eventEmitter.on.bind(self.eventEmitter);
         }
         if (property === 'off') {
-          return this.eventEmitter.off.bind(this.eventEmitter);
+          return self.eventEmitter.off.bind(self.eventEmitter);
         }
         if (property === 'emit') {
-          return this.eventEmitter.emit.bind(this.eventEmitter);
+          return self.eventEmitter.emit.bind(self.eventEmitter);
         }
         
         return target[property];
@@ -166,7 +169,7 @@ export class ReactiveDataManager {
         target[property] = value;
         
         // Émettre l'événement de changement
-        this.eventEmitter.emit('change', {
+        self.eventEmitter.emit('change', {
           type: 'set',
           property,
           oldValue,
@@ -175,7 +178,7 @@ export class ReactiveDataManager {
         });
         
         // Sauvegarder automatiquement
-        this.saveToStorage();
+        self.saveToStorage();
         
         return true;
       },
@@ -185,7 +188,7 @@ export class ReactiveDataManager {
         delete target[property];
         
         // Émettre l'événement de changement
-        this.eventEmitter.emit('change', {
+        self.eventEmitter.emit('change', {
           type: 'delete',
           property,
           oldValue,
@@ -193,14 +196,74 @@ export class ReactiveDataManager {
         });
         
         // Sauvegarder automatiquement
-        this.saveToStorage();
+        self.saveToStorage();
         
         return true;
       }
     });
+  }
 
-    // Charger les données sauvegardées au démarrage
-    this.loadFromStorage();
+  /**
+   * S'abonner à un événement
+   */
+  on(eventName, callback) {
+    return this.eventEmitter.on(eventName, callback);
+  }
+
+  /**
+   * Se désabonner d'un événement
+   */
+  off(eventName, callback) {
+    return this.eventEmitter.off(eventName, callback);
+  }
+
+  /**
+   * Émettre un événement
+   */
+  emit(eventName, data) {
+    return this.eventEmitter.emit(eventName, data);
+  }
+
+  /**
+   * Alias pour addItem (compatibilité avec le Proxy)
+   */
+  add(item) {
+    return this.addItem(item);
+  }
+
+  /**
+   * Alias pour updateItem (compatibilité avec le Proxy)
+   */
+  update(id, updates) {
+    return this.updateItem(id, updates);
+  }
+
+  /**
+   * Alias pour removeItem (compatibilité avec le Proxy)
+   */
+  remove(id) {
+    return this.removeItem(id);
+  }
+
+  /**
+   * Alias pour clearAll (compatibilité avec le Proxy)
+   */
+  clear() {
+    return this.clearAll();
+  }
+
+  /**
+   * Alias pour filterItems (compatibilité avec le Proxy)
+   */
+  filter(predicate) {
+    return this.filterItems(predicate);
+  }
+
+  /**
+   * Alias pour searchItems (compatibilité avec le Proxy)
+   */
+  search(query, fields = []) {
+    return this.searchItems(query, fields);
   }
 
   /**
