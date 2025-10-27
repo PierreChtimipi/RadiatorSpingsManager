@@ -14,7 +14,7 @@ npm run dev
 
 Puis ouvrir **http://localhost:3000** dans votre navigateur.
 
-## � Description
+## 📋 Description
 
 Application permettant de gérer une collection de personnages de l'univers Cars (Flash McQueen, Martin, Sally, Doc Hudson, etc.).
 
@@ -38,9 +38,9 @@ Application permettant de gérer une collection de personnages de l'univers Cars
 - 🎨 **Animations** CSS fluides
 - 💾 **Persistance** automatique (LocalStorage)
 
-## � Technologies
+## 💻 Technologies
 
-- **HTML5, CSS3, JavaScript ES6+** (Vanilla JS uniquement)
+- **HTML5, CSS3, JavaScript** (Vanilla JS)
 - **Vite** (build tool)
 - **CSS Grid & Flexbox** (responsive)
 - **LocalStorage** (persistance)
@@ -52,7 +52,7 @@ Application permettant de gérer une collection de personnages de l'univers Cars
 src/
 ├── main.js              # Application principale
 ├── data/
-│   ├── characters.json  # Données JSON (12 personnages)
+│   ├── characters.json  # Données JSON
 │   └── characters.js    # Import des données
 ├── utils/
 │   ├── dataManager.js   # Proxy + LocalStorage + EventEmitter
@@ -64,32 +64,9 @@ src/
     └── main.css         # Styles + animations
 ```
 
-## 💡 Concepts techniques mis en œuvre
+### Promotion : ISEN AP4 - 2025/2026  
 
-- **Manipulation DOM** : `createElement`, `appendChild`, `querySelector`
-- **Proxy JavaScript** : Synchronisation automatique données ↔ DOM
-- **EventEmitter** : Pattern Observer pour communication entre composants
-- **LocalStorage** : Persistance des données avec `JSON.stringify/parse`
-- **Validation formulaire** : Règles réutilisables et validation temps réel
-- **CSS Variables** : Thème dynamique clair/sombre
-- **Animations CSS** : `@keyframes`, transitions fluides
-- **Responsive Design** : CSS Grid (`auto-fill`, `minmax`) + Flexbox + Media Queries
-
-## � Licence
-
-Projet éducatif - Cours de Développement Web - Octobre 2025  
-✅ **Gestion d'événements** complète  
-✅ **LocalStorage** pour la persistance  
-✅ **Mode sombre/clair** avec bascule  
-✅ **Animations CSS** fluides  
-✅ **Responsive Design** Grid/Flexbox  
-✅ **Validation de formulaire** robuste  
-✅ **Thème original** (Cars)  
-
-## 📄 Licence
-
-Ce projet est développé dans le cadre d'un exercice pédagogique sur les technologies web modernes.
-
----
-
-**Développé avec ❤️ et beaucoup de ☕ pour l'univers de Cars ! 🏎️**
+> Groupe : 
+>- Pierre Foulon
+>- Sacha Bouton
+>- Clément Paghent
