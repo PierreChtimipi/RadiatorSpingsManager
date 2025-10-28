@@ -3,7 +3,7 @@
  * Orchestre tous les composants et fonctionnalités
  */
 
-import { carsCharacters, CarsDataManager } from './data/characters.js';
+import { carsCharacters } from './data/characters.js';
 import { ReactiveDataManager, StorageService } from './utils/dataManager.js';
 import { ThemeManager } from './utils/themeManager.js';
 import { CharacterCard, CharacterDetails, NotificationManager } from './components/ui.js';
@@ -267,13 +267,23 @@ class CarsApp {
     const savedCharacters = StorageService.load(StorageService.KEYS.CHARACTERS, []);
     
     if (savedCharacters.length === 0) {
-      // Première visite : charger les données par défaut
-      console.log('Chargement des données par défaut...');
-      this.dataManager.resetToDefault(carsCharacters);
-      this.notificationManager.info('Données par défaut chargées. Bienvenue! 👋');
+      // Première visite : charger depuis l'API (avec fetch)
+      console.log('📡 Chargement depuis l\'API...');
+      const apiCharacters = await this.dataManager.loadFromApi();
+      
+      if (apiCharacters.length > 0) {
+        // Sauvegarder en local après récupération API
+        this.dataManager.saveToStorage();
+        this.notificationManager.success('Données chargées depuis l\'API! 🚀');
+      } else {
+        // Fallback sur les données par défaut
+        console.log('Fallback sur données par défaut...');
+        this.dataManager.resetToDefault(carsCharacters);
+        this.notificationManager.info('Données par défaut chargées. Bienvenue! 👋');
+      }
     } else {
       // Charger les données sauvegardées
-      console.log('Chargement des données sauvegardées...');
+      console.log('💾 Chargement des données sauvegardées...');
       this.dataManager.loadFromStorage();
     }
   }

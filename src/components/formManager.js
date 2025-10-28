@@ -7,9 +7,7 @@ export class FormValidator {
     this.errors = new Map();
   }
 
-  /**
-   * Ajouter une règle de validation pour un champ
-   */
+  // règle de validation pour un champ
   addRule(fieldName, validator, errorMessage) {
     if (!this.rules.has(fieldName)) {
       this.rules.set(fieldName, []);
@@ -20,9 +18,7 @@ export class FormValidator {
     });
   }
 
-  /**
-   * Règles de validation prédéfinies
-   */
+  // Règles de validation prédéfinies
   static validators = {
     required: (value) => value && value.trim() !== '',
     minLength: (min) => (value) => !value || value.length >= min,
@@ -41,9 +37,7 @@ export class FormValidator {
     pattern: (regex) => (value) => !value || regex.test(value)
   };
 
-  /**
-   * Valider un champ spécifique
-   */
+  // Valider un champ spécifique
   validateField(fieldName, value) {
     this.clearFieldError(fieldName);
 
@@ -60,9 +54,7 @@ export class FormValidator {
     return true;
   }
 
-  /**
-   * Valider tous les champs
-   */
+  // Valider toutes les données du formulaire
   validateAll(formData) {
     let isValid = true;
     this.clearAllErrors();
@@ -76,45 +68,38 @@ export class FormValidator {
     return isValid;
   }
 
-  /**
-   * Définir une erreur pour un champ
-   */
+  // Définir une erreur pour un champ
   setFieldError(fieldName, errorMessage) {
     this.errors.set(fieldName, errorMessage);
   }
 
-  /**
-   * Effacer l'erreur d'un champ
-   */
-  clearFieldError(fieldName) {
-    this.errors.delete(fieldName);
-  }
-
-  /**
-   * Effacer toutes les erreurs
-   */
-  clearAllErrors() {
-    this.errors.clear();
-  }
-
-  /**
-   * Obtenir les erreurs
-   */
+  // Obtenir les erreurs  
   getErrors() {
     return Object.fromEntries(this.errors);
   }
 
-  /**
-   * Vérifier s'il y a des erreurs
-   */
+  // Effacer l'erreur d'un champ
+  clearFieldError(fieldName) {
+    this.errors.delete(fieldName);
+  }
+
+  // Effacer toutes les erreurs
+  clearAllErrors() {
+    this.errors.clear();
+  }
+
+  // Obtenir les erreurs
+  getErrors() {
+    return Object.fromEntries(this.errors);
+  }
+
+  // Vérifier s'il y a des erreurs
   hasErrors() {
     return this.errors.size > 0;
   }
 }
 
-/**
- * Gestionnaire de formulaire pour les personnages
- */
+  // Gestionnaire de formulaire pour les personnages
 export class CharacterFormManager {
   constructor(formElement, options = {}) {
     this.form = formElement;

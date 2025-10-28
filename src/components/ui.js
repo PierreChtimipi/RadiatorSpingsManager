@@ -83,9 +83,7 @@ export class CharacterCard {
     `;
   }
 
-  /**
-   * Générer le HTML des actions
-   */
+  // HTML des actions
   getActionsHTML() {
     return `
       <div class="character-actions">
@@ -165,14 +163,6 @@ export class CharacterCard {
   getDefaultImage() {
     const type = this.character.type.toLowerCase();
     
-    const imageMap = {
-      'voiture': 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=300&fit=crop',
-      'dépanneuse': 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop',
-      'porsche': 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=300&fit=crop',
-      'hudson': 'https://images.unsplash.com/photo-1502877338535-766e1452684a?w=400&h=300&fit=crop',
-      'fiat': 'https://images.unsplash.com/photo-1583747091849-ad948d080622?w=400&h=300&fit=crop',
-      'chevrolet': 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop'
-    };
     
     // Trouver une image correspondante au type
     for (const [key, url] of Object.entries(imageMap)) {
@@ -181,8 +171,6 @@ export class CharacterCard {
       }
     }
     
-    // Image par défaut
-    return 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop';
   }
 
   /**
