@@ -3,61 +3,66 @@
     "id": 1,
     "name": "Flash McQueen",
     "type": "Voiture de course",
-    "color": "#FF0000",
+    "color": "#ff0000",
     "description": "Flash McQueen est une voiture de course rouge numéro 95. Ambitieux et déterminé, il apprend l'importance de l'amitié et de l'humilité à Radiator Springs.",
     "hometown": "Radiator Springs",
-    "imageUrl": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=300&fit=crop",
+    "imageUrl": "https://i-mom.unimedias.fr/2024-01/flash_mcqueen_personnages-cars.jpg?auto=format,compress&cs=tinysrgb&ixlib=php-4.1.0&w=1200",
     "specialty": "Course sur circuit",
     "isFavorite": false,
-    "year": 2006
+    "year": 2006,
+    "updatedAt": "2025-10-28T12:28:28.029Z"
   },
   {
     "id": 2,
     "name": "Martin",
     "type": "Dépanneuse",
-    "color": "#8B4513",
+    "color": "#8b4513",
     "description": "Martin est une dépanneuse rouillée au grand cœur. Meilleur ami de Flash, il est toujours prêt à aider malgré son moteur capricieux.",
     "hometown": "Radiator Springs",
-    "imageUrl": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop",
+    "imageUrl": "https://www.largus.fr/images/styles/max_1300x1300/public/2023-06/cars-martin-mk-bd_7.jpg?itok=31kt3LeJ",
     "specialty": "Dépannage et marche arrière",
     "isFavorite": false,
-    "year": 2006
+    "year": 2006,
+    "updatedAt": "2025-10-27T15:14:58.013Z"
   },
   {
     "id": 3,
     "name": "Sally Carrera",
     "type": "Porsche 911",
-    "color": "#4169E1",
+    "color": "#4169e1",
     "description": "Sally est une Porsche bleue élégante, avocate devenue propriétaire du Cozy Cone Motel. Elle aide Flash à découvrir les valeurs de Radiator Springs.",
     "hometown": "Radiator Springs",
-    "imageUrl": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=300&fit=crop",
+    "imageUrl": "https://www.automobile-magazine.fr/asset/cms/800x449/202998/config/150638/pour-son-dernier-one-off-le-constructeur-allemand-porsche-sest-inspire-du-personnage-de-sally-carrera-que-vous-avez-pu-decouvrir-dans-la-trilogie-cars.jpg",
     "specialty": "Droit et hospitalité",
     "isFavorite": false,
-    "year": 2006
+    "year": 2006,
+    "updatedAt": "2025-10-27T15:16:33.054Z"
   },
   {
     "id": 4,
     "name": "Doc Hudson",
     "type": "Hudson Hornet 1951",
-    "color": "#2F4F4F",
+    "color": "#2f4f4f",
     "description": "Doc Hudson est le médecin et juge de Radiator Springs, mais aussi l'ancien champion Fabulous Hudson Hornet. Mentor de Flash McQueen.",
     "hometown": "Radiator Springs",
-    "imageUrl": "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=400&h=300&fit=crop",
+    "imageUrl": "https://www.chroniquedisney.fr/imgPerso/secondsroles/2006-doc-hudson-02.jpg",
     "specialty": "Médecine et course",
     "isFavorite": false,
-    "year": 2006
+    "year": 2006,
+    "updatedAt": "2025-10-27T15:18:07.031Z"
   },
   {
     "id": 5,
     "name": "Flo",
     "type": "Show car des années 50",
-    "color": "#FF69B4",
+    "color": "#ff69b4",
     "description": "Flo est la propriétaire du V8 Café, connue pour ses milkshakes et son caractère bien trempé. Épouse de Ramone.",
     "hometown": "Radiator Springs",
-    "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+    "imageUrl": "https://cdn11.bigcommerce.com/s-36f0xn7qz3/images/stencil/1280x1280/products/1096/3335/2430_Flo_C3_34__20732__36697.1735829617.jpg?c=1",
     "specialty": "Cuisine et service",
     "isFavorite": false,
-    "year": 2006
+    "year": 2006,
+    "updatedAt": "2025-10-27T15:20:06.830Z"
   },
   {
     "id": 6,
@@ -66,58 +71,63 @@
     "color": "#800080",
     "description": "Ramone est un lowrider passionné de customisation. Il change de couleur selon son humeur et tient le magasin de carrosserie.",
     "hometown": "Radiator Springs",
-    "imageUrl": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=300&fit=crop",
+    "imageUrl": "https://i.pinimg.com/736x/5c/d1/4f/5cd14f411bfadab7f86d947d143e4ef7.jpg",
     "specialty": "Peinture et customisation",
     "isFavorite": false,
-    "year": 2006
+    "year": 2006,
+    "updatedAt": "2025-10-27T15:22:35.950Z"
   },
   {
     "id": 7,
     "name": "Luigi",
     "type": "Fiat 500",
-    "color": "#FFFF00",
+    "color": "#ffff00",
     "description": "Luigi est le propriétaire du magasin de pneus Casa Della Tires. Passionné de course automobile, surtout les Ferrari italiennes.",
     "hometown": "Radiator Springs",
-    "imageUrl": "https://images.unsplash.com/photo-1583747091849-ad948d080622?w=400&h=300&fit=crop",
+    "imageUrl": "https://www.justbake.in/userfiles/cars-luigi-cake.jpg",
     "specialty": "Vente de pneus",
     "isFavorite": false,
-    "year": 2006
+    "year": 2006,
+    "updatedAt": "2025-10-27T15:23:14.467Z"
   },
   {
     "id": 8,
     "name": "Guido",
     "type": "Chariot élévateur Alza/Tutto",
-    "color": "#0000FF",
+    "color": "#0000ff",
     "description": "Guido est l'assistant de Luigi et le plus rapide changeur de pneus du monde. Il ne parle qu'italien mais comprend tout.",
     "hometown": "Radiator Springs",
-    "imageUrl": "https://images.unsplash.com/photo-1558563438-6d8b97f1ae73?w=400&h=300&fit=crop",
+    "imageUrl": "https://cdn11.bigcommerce.com/s-36f0xn7qz3/images/stencil/1280x1280/products/1094/3339/2428_Guido_C3_40__58688__65824.1735829616.jpg?c=1",
     "specialty": "Changement de pneus express",
     "isFavorite": false,
-    "year": 2006
+    "year": 2006,
+    "updatedAt": "2025-10-27T15:24:00.176Z"
   },
   {
     "id": 9,
     "name": "Sergent",
     "type": "Jeep Willys 1942",
-    "color": "#556B2F",
+    "color": "#556b2f",
     "description": "Sergent est un vétéran de la Seconde Guerre mondiale reconverti en propriétaire du magasin d'accessoires militaires Sarge's Surplus Hut.",
     "hometown": "Radiator Springs",
-    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=300&fit=crop",
+    "imageUrl": "https://disneycarsmania.com/wp-content/uploads/2011/01/cars-sergent.jpg",
     "specialty": "Équipement militaire",
     "isFavorite": false,
-    "year": 2006
+    "year": 2006,
+    "updatedAt": "2025-10-27T15:24:26.741Z"
   },
   {
     "id": 10,
     "name": "Fillmore",
     "type": "Volkswagen Type 2 1960",
-    "color": "#98D8C8",
+    "color": "#98d8c8",
     "description": "Fillmore est un van hippie écologiste qui vend du carburant bio. Ami de Sergent malgré leurs différences d'opinions.",
     "hometown": "Radiator Springs",
-    "imageUrl": "https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=400&h=300&fit=crop",
+    "imageUrl": "https://www.otakia.com/wp-content/uploads/V_1/personnage_31/2517.jpg",
     "specialty": "Carburant organique",
     "isFavorite": false,
-    "year": 2006
+    "year": 2006,
+    "updatedAt": "2025-10-27T15:25:11.650Z"
   },
   {
     "id": 11,
@@ -126,21 +136,23 @@
     "color": "#000000",
     "description": "Lizzie est la doyenne de Radiator Springs, propriétaire du magasin de souvenirs. Elle a un caractère bien trempé et une mémoire sélective.",
     "hometown": "Radiator Springs",
-    "imageUrl": "https://images.unsplash.com/photo-1509580357930-a711cf9d888d?w=400&h=300&fit=crop",
+    "imageUrl": "https://preview.redd.it/is-lizzie-dead-already-v0-chgeibt949lc1.png?width=1039&format=png&auto=webp&s=fe50f3aef31ad48743fe35178b7e10a43a069b5e",
     "specialty": "Souvenirs et histoire",
     "isFavorite": false,
-    "year": 2006
+    "year": 2006,
+    "updatedAt": "2025-10-27T15:25:36.647Z"
   },
   {
     "id": 12,
     "name": "Red",
     "type": "Camion de pompier années 50",
-    "color": "#DC143C",
+    "color": "#dc143c",
     "description": "Red est le camion de pompier timide et sensible de Radiator Springs. Il adore arroser ses fleurs et déteste les bruits forts.",
     "hometown": "Radiator Springs",
-    "imageUrl": "https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=400&h=300&fit=crop",
+    "imageUrl": "https://preview.redd.it/spontaneous-thought-is-red-from-disney-cars-a-non-verbal-v0-cijkej7m2wkb1.png?auto=webp&s=cfab856ce1a1f5468e6609ce41407770e46121b6",
     "specialty": "Lutte contre les incendies et jardinage",
     "isFavorite": false,
-    "year": 2006
+    "year": 2006,
+    "updatedAt": "2025-10-27T15:26:34.831Z"
   }
 ]
