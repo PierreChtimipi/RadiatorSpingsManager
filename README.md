@@ -1,4 +1,4 @@
-# 🏎️ Cars Character Manager
+# Cars Character Manager
 
 Application web de gestion des personnages du film **Cars** (Pixar), développée en **Vanilla JavaScript** avec Vite.
 

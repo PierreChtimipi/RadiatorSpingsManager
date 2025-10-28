@@ -64,13 +64,13 @@ class CarsApp {
       
       // Animation de chargement terminée
       this.showLoadedState();
-      
-      console.log('🏎️ Cars Character Manager initialisé avec succès!');
-      this.notificationManager.success('Application chargée avec succès! 🏎️');
-      
+
+      console.log("Cars Character Manager initialisé avec succès!");
+      this.notificationManager.success("Application chargée avec succès!");
+
     } catch (error) {
-      console.error('Erreur lors de l\'initialisation:', error);
-      this.notificationManager.error('Erreur lors du chargement de l\'application');
+      console.error("Erreur lors de l'initialisation:", error);
+      this.notificationManager.error("Erreur lors du chargement de l'application");
     }
   }
 
@@ -130,15 +130,15 @@ class CarsApp {
     });
 
     this.dataManager.on('itemAdded', (character) => {
-      this.notificationManager.success(`${character.name} a été ajouté avec succès! 🎉`);
+      this.notificationManager.success(`${character.name} a été ajouté avec succès!`);
     });
 
     this.dataManager.on('itemUpdated', ({ newItem }) => {
-      this.notificationManager.success(`${newItem.name} a été modifié avec succès! ✏️`);
+      this.notificationManager.success(`${newItem.name} a été modifié avec succès!`);
     });
 
     this.dataManager.on('itemRemoved', (character) => {
-      this.notificationManager.success(`${character.name} a été supprimé avec succès! 🗑️`);
+      this.notificationManager.success(`${character.name} a été supprimé avec succès!`);
     });
   }
 

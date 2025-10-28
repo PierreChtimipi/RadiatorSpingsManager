@@ -14,35 +14,26 @@
     <header class="header">
         <div class="header-container">
             <div class="logo">
-                <h1>🏎️ Cars Manager</h1>
+                <h1>Cars Characters Manager</h1>
                 <p>Gestionnaire des personnages de Radiator Springs</p>
             </div>
-            
-            <nav class="nav">
-                <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
-                    <span class="theme-icon">🌙</span>
-                </button>
-                <button id="add-character-btn" class="btn btn-primary">
-                    ➕ Nouveau personnage
-                </button>
-            </nav>
         </div>
     </header>
 
     <!-- Barre de recherche et filtres -->
     <section class="search-section">
         <div class="search-container">
-            <div class="search-bar">
-                <input 
-                    type="text" 
-                    id="search-input" 
-                    placeholder="🔍 Rechercher un personnage..."
-                    class="search-input"
-                >
-                <button id="clear-search" class="clear-btn">✖️</button>
-            </div>
-            
-            <div class="filters">
+            <div class="search-bar-row">
+                <div class="search-bar">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        placeholder="Rechercher un personnage..."
+                        class="search-input"
+                    >
+                    <button id="clear-search" class="clear-btn">✖️</button>
+                </div>
+                
                 <select id="type-filter" class="filter-select">
                     <option value="">Tous les types</option>
                     <option value="voiture">Voiture de course</option>
@@ -52,14 +43,12 @@
                     <option value="fiat">Fiat</option>
                     <option value="chevrolet">Chevrolet</option>
                 </select>
-                
+            </div>
+            
+            <div class="filters">
                 <button id="favorites-toggle" class="btn btn-secondary">
                     ⭐ Favoris uniquement
                 </button>
-                
-                <div class="stats">
-                    <span id="character-count">0 personnages</span>
-                </div>
             </div>
         </div>
     </section>
@@ -69,6 +58,16 @@
         <div class="main-container">
             <!-- Liste des personnages -->
             <section class="characters-section">
+                <!-- En-tête avec stats et bouton d'ajout -->
+                <div class="characters-header">
+                    <div class="stats">
+                        <span id="character-count">0 personnages</span>
+                    </div>
+                    <button id="add-character-btn" class="btn btn-primary">
+                        ➕ Nouveau personnage
+                    </button>
+                </div>
+                
                 <div id="characters-grid" class="characters-grid">
                     <!-- Les cartes de personnages seront générées dynamiquement ici -->
                 </div>
@@ -242,6 +241,11 @@
     <!-- Bouton de retour en haut -->
     <button id="scroll-to-top" class="scroll-to-top" style="display: none;">
         ⬆️
+    </button>
+
+    <!-- Bouton de changement de thème (flottant en bas à droite) -->
+    <button id="theme-toggle" class="theme-toggle-floating" aria-label="Basculer le thème">
+        <span class="theme-icon">💡</span>
     </button>
 
     <!-- Scripts JavaScript -->

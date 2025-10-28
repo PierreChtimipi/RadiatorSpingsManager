@@ -8,7 +8,7 @@
     "hometown": "Radiator Springs",
     "imageUrl": "https://i-mom.unimedias.fr/2024-01/flash_mcqueen_personnages-cars.jpg?auto=format,compress&cs=tinysrgb&ixlib=php-4.1.0&w=1200",
     "specialty": "Course sur circuit",
-    "isFavorite": false,
+    "isFavorite": true,
     "year": 2006,
     "updatedAt": "2025-10-28T12:28:28.029Z"
   },

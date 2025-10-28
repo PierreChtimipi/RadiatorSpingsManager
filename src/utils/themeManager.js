@@ -160,7 +160,7 @@ export class ThemeManager {
     if (this.themeToggleBtn) {
       const iconElement = this.themeToggleBtn.querySelector('.theme-icon');
       if (iconElement) {
-        iconElement.textContent = theme === 'dark' ? '☀️' : '🌙';
+        iconElement.textContent = theme === 'dark' ? '🛌' : '💡';
       }
       
       // Mettre à jour l'attribut aria-label pour l'accessibilité
