@@ -42,27 +42,27 @@
     "id": 4,
     "name": "Doc Hudson",
     "type": "Hudson Hornet 1951",
-    "color": "#2f4f4f",
+    "color": "#000552",
     "description": "Doc Hudson est le médecin et juge de Radiator Springs, mais aussi l'ancien champion Fabulous Hudson Hornet. Mentor de Flash McQueen.",
     "hometown": "Radiator Springs",
     "imageUrl": "https://www.chroniquedisney.fr/imgPerso/secondsroles/2006-doc-hudson-02.jpg",
     "specialty": "Médecine et course",
     "isFavorite": false,
     "year": 2006,
-    "updatedAt": "2025-10-27T15:18:07.031Z"
+    "updatedAt": "2025-10-28T12:35:45.536Z"
   },
   {
     "id": 5,
     "name": "Flo",
     "type": "Show car des années 50",
-    "color": "#ff69b4",
+    "color": "#24f1f5",
     "description": "Flo est la propriétaire du V8 Café, connue pour ses milkshakes et son caractère bien trempé. Épouse de Ramone.",
     "hometown": "Radiator Springs",
     "imageUrl": "https://cdn11.bigcommerce.com/s-36f0xn7qz3/images/stencil/1280x1280/products/1096/3335/2430_Flo_C3_34__20732__36697.1735829617.jpg?c=1",
     "specialty": "Cuisine et service",
     "isFavorite": false,
     "year": 2006,
-    "updatedAt": "2025-10-27T15:20:06.830Z"
+    "updatedAt": "2025-10-28T12:36:09.508Z"
   },
   {
     "id": 6,
@@ -81,40 +81,40 @@
     "id": 7,
     "name": "Luigi",
     "type": "Fiat 500",
-    "color": "#ffff00",
+    "color": "#e2e260",
     "description": "Luigi est le propriétaire du magasin de pneus Casa Della Tires. Passionné de course automobile, surtout les Ferrari italiennes.",
     "hometown": "Radiator Springs",
     "imageUrl": "https://www.justbake.in/userfiles/cars-luigi-cake.jpg",
     "specialty": "Vente de pneus",
     "isFavorite": false,
     "year": 2006,
-    "updatedAt": "2025-10-27T15:23:14.467Z"
+    "updatedAt": "2025-10-28T12:36:31.677Z"
   },
   {
     "id": 8,
     "name": "Guido",
     "type": "Chariot élévateur Alza/Tutto",
-    "color": "#0000ff",
+    "color": "#039dfc",
     "description": "Guido est l'assistant de Luigi et le plus rapide changeur de pneus du monde. Il ne parle qu'italien mais comprend tout.",
     "hometown": "Radiator Springs",
     "imageUrl": "https://cdn11.bigcommerce.com/s-36f0xn7qz3/images/stencil/1280x1280/products/1094/3339/2428_Guido_C3_40__58688__65824.1735829616.jpg?c=1",
     "specialty": "Changement de pneus express",
     "isFavorite": false,
     "year": 2006,
-    "updatedAt": "2025-10-27T15:24:00.176Z"
+    "updatedAt": "2025-10-28T12:36:58.275Z"
   },
   {
     "id": 9,
     "name": "Sergent",
     "type": "Jeep Willys 1942",
-    "color": "#556b2f",
+    "color": "#384521",
     "description": "Sergent est un vétéran de la Seconde Guerre mondiale reconverti en propriétaire du magasin d'accessoires militaires Sarge's Surplus Hut.",
     "hometown": "Radiator Springs",
     "imageUrl": "https://disneycarsmania.com/wp-content/uploads/2011/01/cars-sergent.jpg",
     "specialty": "Équipement militaire",
     "isFavorite": false,
     "year": 2006,
-    "updatedAt": "2025-10-27T15:24:26.741Z"
+    "updatedAt": "2025-10-28T12:37:25.329Z"
   },
   {
     "id": 10,
