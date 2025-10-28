@@ -1,8 +1,8 @@
 # Cars Character Manager
 
 Application web de gestion des personnages du film **Cars** (Pixar), développée en **Vanilla JavaScript** avec Vite.
-
-## 🚀 Lancement rapide
+ 
+##Lancement rapide :
 
 ```bash
 # Installer les dépendances
@@ -12,33 +12,33 @@ npm install
 npm run dev
 ```
 
-Puis ouvrir **http://localhost:3000** dans votre navigateur.
+Puis ouvrir http://localhost:3000 dans votre navigateur.
 
-## 📋 Description
+## Description
 
 Application permettant de gérer une collection de personnages de l'univers Cars (Flash McQueen, Martin, Sally, Doc Hudson, etc.).
 
 **Thème choisi** : Les habitants de Radiator Springs
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
 ### Gestion des personnages
-- ✅ **Afficher** la liste des personnages en grille
-- ✅ **Ajouter** de nouveaux personnages
-- ✅ **Modifier** les personnages existants
-- ✅ **Supprimer** des personnages (avec confirmation)
-- ✅ **Favoris** : marquer/démarquer des personnages favoris
+- **Afficher** la liste des personnages en grille
+- **Ajouter** de nouveaux personnages
+- **Modifier** les personnages existants
+- **Supprimer** des personnages (avec confirmation)
+- **Favoris** : marquer/démarquer des personnages favoris
 
 ### Interface
-- 🔍 **Recherche** en temps réel (nom, type, ville)
-- 🏷️ **Filtres** par type de véhicule
-- ⭐ **Filtre favoris**
-- 🌓 **Mode sombre/clair** avec bascule
-- 📱 **Responsive** : mobile, tablette, desktop
-- 🎨 **Animations** CSS fluides
-- 💾 **Persistance** automatique (LocalStorage)
+- **Recherche** en temps réel (nom, type, ville)
+- **Filtres** par type de véhicule
+- **Filtre favoris**
+- **Mode sombre/clair** avec bascule
+- **Responsive** : mobile, tablette, desktop
+- **Animations** CSS fluides
+- **Persistance** automatique (LocalStorage)
 
-## 💻 Technologies
+## Technologies
 
 - **HTML5, CSS3, JavaScript** (Vanilla JS)
 - **Vite** (build tool)
@@ -46,7 +46,7 @@ Application permettant de gérer une collection de personnages de l'univers Cars
 - **LocalStorage** (persistance)
 - **Proxy JavaScript** (réactivité)
 
-## 📁 Structure
+## Structure
 
 ```
 src/
