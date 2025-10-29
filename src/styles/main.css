@@ -1,6 +1,8 @@
-/* ===== VARIABLES CSS ===== */
+/* ===== VARIABLES CSS avec light-dark() ===== */
 :root {
-  /* Couleurs du thème clair */
+  color-scheme: light dark;
+  
+  /* Couleurs principales (fixes) */
   --primary-color: #FF6B35;
   --primary-light: #FF8A5C;
   --primary-dark: #E5562A;
@@ -10,17 +12,17 @@
   --success-color: #2ED573;
   --warning-color: #FFA502;
   
-  /* Couleurs neutres */
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F8F9FA;
-  --bg-tertiary: #E9ECEF;
-  --text-primary: #2C3E50;
-  --text-secondary: #6C757D;
-  --text-muted: #ADB5BD;
-  --border-color: #DEE2E6;
-  --shadow-light: rgba(0, 0, 0, 0.1);
-  --shadow-medium: rgba(0, 0, 0, 0.15);
-  --shadow-heavy: rgba(0, 0, 0, 0.25);
+  /* Couleurs adaptatives avec light-dark() */
+  --bg-primary: light-dark(#FFFFFF, #1A1A2E);
+  --bg-secondary: light-dark(#F8F9FA, #16213E);
+  --bg-tertiary: light-dark(#E9ECEF, #0F3460);
+  --text-primary: light-dark(#2C3E50, #FFFFFF);
+  --text-secondary: light-dark(#6C757D, #E2E8F0);
+  --text-muted: light-dark(#ADB5BD, #94A3B8);
+  --border-color: light-dark(#DEE2E6, #334155);
+  --shadow-light: light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+  --shadow-medium: light-dark(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.4));
+  --shadow-heavy: light-dark(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6));
   
   /* Typographie */
   --font-racing: 'Racing Sans One', cursive;
@@ -59,20 +61,6 @@
   --z-sticky: 200;
   --z-modal: 1000;
   --z-toast: 1100;
-}
-
-/* Thème sombre */
-[data-theme="dark"] {
-  --bg-primary: #1A1A2E;
-  --bg-secondary: #16213E;
-  --bg-tertiary: #0F3460;
-  --text-primary: #FFFFFF;
-  --text-secondary: #E2E8F0;
-  --text-muted: #94A3B8;
-  --border-color: #334155;
-  --shadow-light: rgba(0, 0, 0, 0.3);
-  --shadow-medium: rgba(0, 0, 0, 0.4);
-  --shadow-heavy: rgba(0, 0, 0, 0.6);
 }
 
 /* ===== BASE ===== */
@@ -457,7 +445,7 @@ body {
 
 /* ===== DÉTAILS DU PERSONNAGE (DANS MODAL) ===== */
 .details-content {
-  /* Le contenu sera stylisé par CharacterDetails dans ui.js */
+  padding: var(--space-md);
 }
 
 .close-btn {

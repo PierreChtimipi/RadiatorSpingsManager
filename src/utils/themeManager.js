@@ -32,11 +32,7 @@ export class ThemeManager {
 
   // Appliquer le thème sur la page
   applyTheme(theme) {
-    if (theme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-    }
+    document.documentElement.style.colorScheme = theme;
     
     // Changer l'icône du bouton
     const btn = document.getElementById('theme-toggle');

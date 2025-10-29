@@ -318,7 +318,7 @@ class CarsApp {
 
     // Appliquer la recherche
     if (this.state.searchQuery) {
-      characters = this.dataManager.searchItems(this.state.searchQuery, ['name', 'type', 'hometown', 'specialty']);
+      characters = this.dataManager.search(this.state.searchQuery, ['name', 'type', 'hometown', 'specialty']);
     }
 
     // Appliquer le filtre par type
