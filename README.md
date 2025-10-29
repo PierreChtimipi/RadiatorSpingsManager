@@ -2,7 +2,8 @@
 
 Application web de gestion des personnages du film **Cars** (Pixar), développée en **Vanilla JavaScript** avec Vite.
  
-##Lancement rapide :
+
+## Lancement rapide :
 
 ```bash
 # Installer les dépendances
@@ -19,6 +20,10 @@ Puis ouvrir http://localhost:3000 dans votre navigateur.
 Application permettant de gérer une collection de personnages de l'univers Cars (Flash McQueen, Martin, Sally, Doc Hudson, etc.).
 
 **Thème choisi** : Les habitants de Radiator Springs
+
+## Maquette
+![Maquette Figma](./maquette%20figma.png)
+
 
 ## Fonctionnalités
 
